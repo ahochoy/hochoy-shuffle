@@ -1,13 +1,15 @@
 ---
 import "../styles/global.css";
+
+import Scene from "./Scene.jsx";
 ---
 <header>
-    <div><p>3D Hero Placeholder</p></div>
-    <nav class="flex justify-between w-full items-center p-8">
+    <div id="header-hero" class="mx-16 min-h-60 rounded-b-4xl bg-amber-300"><Scene client:visible /></div>
+    <nav class="flex justify-between w-full items-center p-16">
         <a href="/" class="text-4xl">&rew HoChoy</a>
         <div class="flex gap-12 text-xl items-center">
-            <a>Projects</a>
-            <a>Work</a>
+            <a href="#projects">Projects</a>
+            <a href="#works">Work</a>
             <a>Writings</a>
             <a class="bg-stone-100 p-5 rounded-xl">DMs are open <span class="dot"></span></a>
         </div>
@@ -23,4 +25,9 @@ import "../styles/global.css";
         display: inline-block;
         margin-left: .5rem;
     }
+
+    #header-hero {
+        transition: height 2s;
+    }
+
 </style>

@@ -1,0 +1,16 @@
+---
+import "../styles/global.css";
+import type { CollectionEntry } from 'astro:content';
+import { render } from 'astro:content';
+interface Props {
+  experience: CollectionEntry<'pastExperiences' | 'currentExperiences'>;
+}
+
+// `post` will match your 'blog' collection schema type
+const { experience } = Astro.props;
+---
+
+<div class="flex flex-col gap-2 mb-15">
+    <h3 class="text-xl font-medium">{experience.data.title}</h3>
+    <p class="font-light">{experience.data.description}</p>
+</div>

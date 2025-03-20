@@ -26,7 +26,7 @@ const currentExperiences = defineCollection({
 });
 
 const pastExperiences = defineCollection({
-    loader: file("src/data/experiences.json", { parser: (text) => JSON.parse(text).current }),
+    loader: file("src/data/experiences.json", { parser: (text) => JSON.parse(text).past }),
     schema: experienceSchema
 });
 

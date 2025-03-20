@@ -10,13 +10,15 @@ interface Props {
 const { project } = Astro.props;
 const { Content, headings } = await render(project);
 ---
-<div class="flex flex-col gap-1">
-    <h3 class="text-xl font-bold">{project.data.title}</h3>
-    <a href={project.data.link} class="text-stone-400">{project.data.link}</a>
-    <Content />
+<div class="flex flex-col gap-2">
+    <h3 class="text-xl font-medium">{project.data.title}</h3>
+    <a href={project.data.link} target="_blank" class="text-stone-400">{project.data.link}</a>
+    <div class="font-light">
+      <Content />
+    </div>
     <div class="flex gap-4 mt-2">
       {project.data.tags.map(tag => (
-        <span class="p-2 bg-stone-100 rounded-lg">{tag}</span>
+        <span class="p-2 bg-stone-100 rounded-lg text-sm">{tag}</span>
       ))}
     </div>
 </div>
