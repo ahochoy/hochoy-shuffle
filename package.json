@@ -12,7 +12,8 @@
     "node": ">=18.19"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^12.2.4",
+    "@astrojs/cloudflare": "^9.2.1",
+    "@fontsource-variable/rubik": "^5.2.5",
     "@tailwindcss/vite": "^4.0.14",
     "astro": "^5.5.3",
     "tailwindcss": "^4.0.14"

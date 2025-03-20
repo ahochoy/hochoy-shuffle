@@ -1,0 +1,22 @@
+---
+import "../styles/global.css";
+import type { CollectionEntry } from 'astro:content';
+import { render } from 'astro:content';
+interface Props {
+  project: CollectionEntry<'projects'>;
+}
+
+// `post` will match your 'blog' collection schema type
+const { project } = Astro.props;
+const { Content, headings } = await render(project);
+---
+<div class="flex flex-col gap-1">
+    <h3 class="text-xl font-bold">{project.data.title}</h3>
+    <a href={project.data.link} class="text-stone-400">{project.data.link}</a>
+    <Content />
+    <div class="flex gap-4 mt-2">
+      {project.data.tags.map(tag => (
+        <span class="p-2 bg-stone-100 rounded-lg">{tag}</span>
+      ))}
+    </div>
+</div>
