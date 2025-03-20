@@ -6,20 +6,19 @@ import { glob, file } from 'astro/loaders';
 
 // 3. Define your collection(s)
 const projects = defineCollection({
-    loader: glob({ pattern: "**/*.md", base: "./src/data/projects" }),
-    schema: {
+    loader: glob({ pattern: "*.md", base: "./src/data/projects" }),
+    schema: z.object({
         title: z.string(),
-        description: z.string(),
-        imageUrl: z.string(),
         link: z.string(),
         tags: z.array(z.string()),
-    }
+    })
 });
 
-const experienceSchema = {
+const experienceSchema = z.object({
+    id: z.string(),
     title: z.string(),
     description: z.string(),
-};
+});
 
 const currentExperiences = defineCollection({
     loader: file("src/data/experiences.json", { parser: (text) => JSON.parse(text).current }),
@@ -27,7 +26,7 @@ const currentExperiences = defineCollection({
 });
 
 const pastExperiences = defineCollection({
-    loader: file("src/data/experiences.json", { parser: (text) => JSON.parse(text).past }),
+    loader: file("src/data/experiences.json", { parser: (text) => JSON.parse(text).current }),
     schema: experienceSchema
 });
 
