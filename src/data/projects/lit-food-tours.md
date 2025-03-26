@@ -1,6 +1,6 @@
 ---
 title: "Lit Food Tours"
-link: "url-incoming.com"
+link: "www.litfoodtours.com"
 tags: ["AI / Groq API", "Python", "Azure", "Docker", "Github Actions"]
 ---
-Let AI plan a food tour for you and one of your favorite characters and on an imaginative culinary adventure! What would Southern favorites would Sherlock Holmes enjoy? What about Hello Kitty on a Mexican vacation? Imagine Thor eating Thai?
+A little experiment to play around with AI and some new technologies. Built using Azure Container Instances, Python, and Grop API. Let the **Lit Food Tour** planner dream up a full day of eating for you and one of your favorite characters. What would Garfield the Cat eat in Japan? How about Iron Man when he's vacationing in Thailand? Imagine Willy Wonka in Mexico?

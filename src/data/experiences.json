@@ -3,39 +3,44 @@
         {
             "id": "1",
             "title": "Full-Time Minister",
-            "description": "Bacon ipsum dolor amet pork doner pastrami flank boudin, buffalo ham. Tongue chuck short ribs burgdoggen."
+            "description": "I participate in a Christian volunteer work where I love people and make disciples by living by, preaching, and teaching Bible truths."
         },
         {
             "id": "2",
-            "title": "Freelance Web Developer",
-            "description": "Bacon ipsum dolor amet pork doner pastrami flank boudin, buffalo ham. Tongue chuck short ribs burgdoggen."
+            "title": "Freelance Digital Consultant ",
+            "description": "I'm available for Web Design, Development, and Digital Marketing work on a project basis. I can also help with building producitivity setups with tools like Notion, implementing automation for your business, and mentoring up-and-coming engineers."
         }
     ],
     "past": [
         {
             "id": "3",
             "title": "Engineering Management @ Workday",
-            "description": "Bacon ipsum dolor amet pork doner pastrami flank boudin, buffalo ham. Tongue chuck short ribs burgdoggen."
+            "description": "Led a distributed team of engineers to deliver an interactive video player enabling enterprise experiences for use cases like learning and recruiting, in partnership with quality assurance, product, and design stakeholders."
         },
         {
             "id": "4",
-            "title": "Product Engineering @ Fint-Tech Startup",
-            "description": "Bacon ipsum dolor amet pork doner pastrami flank boudin, buffalo ham. Tongue chuck short ribs burgdoggen."
+            "title": "Product Engineering @ FinTech Startup",
+            "description": "Worked on growth-focused features like interactive quote builders and internal tools to improve loan servicing reliability and customer experience"
         },
         {
             "id": "5",
             "title": "Agile / Software Consulting @ ThoughtWorks",
-            "description": "Bacon ipsum dolor amet pork doner pastrami flank boudin, buffalo ham. Tongue chuck short ribs burgdoggen."
+            "description": "Developed a loyalty program web portal for a global retailer. Created course content for educating sales professionals on cloud native offerings for a Fortune 500 technology company. Actively contributed to recruiting, community-building, philanthropic, and professional development sessions across multiple US offices."
         },
         {
             "id": "6",
             "title": "Quality Assurance @ Huge",
-            "description": "Bacon ipsum dolor amet pork doner pastrami flank boudin, buffalo ham. Tongue chuck short ribs burgdoggen."
+            "description": "Performed manual and automated testing across a variety of agile teams and projects, including a first-of-its-kind interactive web experience on gaming console for a global food brand. Also, led testing efforts for an internal tool used by senior leadership to analyze project staffing and budgets."
         },
         {
             "id": "7",
             "title": "Quality Assurance @ Ultimate Software",
-            "description": "Bacon ipsum dolor amet pork doner pastrami flank boudin, buffalo ham. Tongue chuck short ribs burgdoggen."
+            "description": "Automated tests for an enterprise software feature enabling location-specific tax capabilities as part of a formal agile team."
+        },
+        {
+            "id": "8",
+            "title": "Education & Professional Development",
+            "description": "B.S. in Computer Science; ongoing professional development in agile software development, software engineering, software testing, leadership, project management, 3d modeling, and modern web technologies. Former Certified Scrum Master. Certificates in Business Management (HBX CORe), Food & Beverage Management (eCornell), User Experience (Parsons), and Intuitive Leadership (IDEO)"
         }
     ]
 }

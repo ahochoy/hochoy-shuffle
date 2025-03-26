@@ -9,7 +9,7 @@ const projects = defineCollection({
     loader: glob({ pattern: "*.md", base: "./src/data/projects" }),
     schema: z.object({
         title: z.string(),
-        link: z.string(),
+        link: z.string().optional(),
         tags: z.array(z.string()),
     })
 });
