@@ -4,17 +4,42 @@ import "../styles/global.css";
 import Scene from "./Scene.jsx";
 ---
 <header>
-    <div id="header-hero" class="mx-16 min-h-60 rounded-b-4xl bg-amber-300"><Scene client:visible /></div>
-    <nav class="flex justify-between w-full items-center p-16">
-        <a href="/" class="text-4xl">&rew HoChoy</a>
-        <div class="flex gap-12 text-xl items-center">
-            <a href="#projects">Projects</a>
-            <a href="#works">Work</a>
-            <a>Writings</a>
-            <a class="bg-stone-100 p-5 rounded-xl">DMs are open <span class="dot"></span></a>
+    <div id="header-hero" class="flex mx-4 md:mx-16  min-h-[60vh] rounded-b-4xl items-center md:aspect-video"><Scene client:visible /></div>
+    <nav class="flex flex-wrap items-center justify-between mx-auto p-4 md:p-16">
+        <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse text-5xl text-[#034C68] hover:text-[#058abd] transition-colors duration-500">&rew.</a>
+        <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-4xl bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white">
+                <li>
+                    <a class="block p-5 rounded-4xl hover:shadow hover:bg-gray-100" href="#projects">Projects</a>
+                </li>
+                <li>
+                    <a class="block p-5 rounded-4xl hover:shadow hover:bg-gray-100" href="#works">Work</a>
+                </li>
+                <li>
+                    <a class="block p-5 rounded-4xl hover:shadow hover:bg-gray-100" href="#writings">Writings</a>  
+                </li>
+                <li>
+                    <a class="block p-5 rounded-4xl hover:shadow bg-[#046d95] hover:bg-[#058abd] text-white transition-colors">DMs are open <span class="dot"></span></a>
+                </li>
+            </ul>
         </div>
     </nav>
 </header>
+
+<script>
+    const menuToggle = document.querySelector('[data-collapse-toggle]') as HTMLElement;
+    const navbar = document.querySelector('#navbar-default') as HTMLElement;
+
+    menuToggle.addEventListener('click', (e) => {
+        navbar.style.display = navbar.checkVisibility() ? 'none' : 'block'; 
+    });
+</script>
 
 <style>
     .dot {
@@ -24,10 +49,6 @@ import Scene from "./Scene.jsx";
         border-radius: 50%;
         display: inline-block;
         margin-left: .5rem;
-    }
-
-    #header-hero {
-        transition: height 2s;
     }
 
 </style>

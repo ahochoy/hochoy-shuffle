@@ -1,6 +1,31 @@
 ---
 import "../styles/global.css"
 ---
-<footer class="mx-16 mt-24 rounded-t-4xl bg-amber-300 min-h-[10vh]"></footer>
+<footer class="mx-4 md:mx-16 mt-24 rounded-t-4xl bg-amber-300 min-h-[30vh] flex place-items-center">
+    <div class="w-full max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 p-16 md:px-0">
+        <h2 class="mix-blend-overlay text-white text-4xl md:text-6xl mb-2">Thanks for visiting.</h2>
+        <div class="row-span-2 flex flex-col md:flex-row gap-8 text-lg justify-stretch">
+            <ul class="flex flex-col gap-4 grow">
+                <li class="text-xl font-semibold">Links</li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#writings">Writings</a></li>
+            </ul>
+            <ul class="flex flex-col gap-4 grow">
+                <li class="text-xl font-semibold">Socials</li>
+                <li><a href="">LinkedIn</a></li>
+                <li><a href="">Instagram</a></li>
+                <li><a href="">Twitter/X</a></li>
+            </ul>
+        </div>
+        <div class="text-sm text-white mix-blend-overlay mt-4 md:mt-0">&copy; 2025 Andrew HoChoy</div>
+    </div>
+</footer>
 
-<style></style>
+<style>
+    a:hover {
+        @apply underline;
+        @apply underline-offset-4;
+        @apply mix-blend-overlay;
+    }
+</style>
