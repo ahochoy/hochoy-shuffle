@@ -2,19 +2,60 @@
 import '../styles/global.css'
 import { Image } from 'astro:assets'
 import headshotImage from '../assets/cropped-headshot.jpeg'
+import charlie from '../assets/charlie.jpg'
 
 interface Props {
     title?: string;
+    htmlId?: string;
 }
 
-const { title } = Astro.props
+const { title, htmlId } = Astro.props
 ---
-<div class="flex flex-col items-end gap-4 w-full my-64">
-    <div class="w-full p-16 bg-stone-50 rounded-4xl">
+<div id={htmlId} class="flex flex-col items-end gap-4 w-full my-36 md:my-72">
+    <div class="w-full p-8 md:p-16 bg-stone-50 rounded-4xl border border-stone-100">
         {title && <h2 class="text-5xl mb-4">{title}</h2>}
-        <div class="font-light text-xl">
+        <div class="font-light text-lg/8 md:text-xl/10">
             <slot />
         </div>
     </div>
-    <Image class="rounded-full w-16" src={headshotImage} alt="headshot of andrew hochoy" />
+    <div class="avatar w-20 h-20">
+        <div class="content">
+            <Image class="front rounded-full w-20" src={headshotImage} alt="headshot of andrew hochoy" />
+            <Image class="back rounded-full w-20" src={charlie} alt="charlie the pup" />
+        </div>
+    </div>
 </div>
+
+
+<style>
+.avatar {
+  position: relative;
+  perspective: 500px;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.avatar:hover .content {
+  transform: rotateY( 180deg ) ;
+  transition: transform 0.5s;
+}
+
+.front,
+.back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.back {
+  transform: rotateY( 180deg );
+}
+</style>
