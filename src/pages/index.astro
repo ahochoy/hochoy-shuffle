@@ -8,7 +8,8 @@ import ChatBubble from '../components/ChatBubble.astro';
 import Project from '../components/Project.astro';
 import Experience from '../components/Experience.astro';
 
-import { Content as BioData } from '../data/bio-data.md';
+import * as bioData from '../data/bio-data.md';
+import * as thoughts from '../data/thoughts-blurb.md';
 import { getCollection } from 'astro:content';
 const projects = await getCollection('projects');
 const currentExperiences = await getCollection('currentExperiences');
@@ -17,8 +18,8 @@ const pastExperiences = await getCollection('pastExperiences');
 
 <Layout>
 	<Header />
-	<main class="h-full w-full max-w-5xl m-auto flex flex-col place-items-center">
-		<ChatBubble><BioData /></ChatBubble>
+	<main class="h-full w-full max-w-5xl m-auto -mt-16 p-8 flex flex-col place-items-center">
+		<ChatBubble title={bioData.frontmatter.title}><bioData.Content /></ChatBubble>
 		<HomepageSection title="Featured Projects" htmlId="projects">
 			{projects.map(project => (
 				<Project project={project} /> 
@@ -34,7 +35,7 @@ const pastExperiences = await getCollection('pastExperiences');
 				<Experience experience={experience} /> 
 			))}
 		</HomepageSection>
-		<ChatBubble title="💭"></ChatBubble>
+		<ChatBubble title={thoughts.frontmatter.title} htmlId="writings"><thoughts.Content /></ChatBubble>
 	</main>
 	<Footer />
 </Layout>

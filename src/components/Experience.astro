@@ -10,7 +10,7 @@ interface Props {
 const { experience } = Astro.props;
 ---
 
-<div class="flex flex-col gap-2 mb-15">
+<div class="flex flex-col gap-2 mb-12">
     <h3 class="text-xl font-medium">{experience.data.title}</h3>
-    <p class="font-light">{experience.data.description}</p>
+    <p class="font-light text-base/7">{experience.data.description}</p>
 </div>

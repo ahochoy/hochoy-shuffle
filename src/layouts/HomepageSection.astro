@@ -2,33 +2,9 @@
 import "../styles/global.css";
 const { title, htmlId } = Astro.props;
 ---
-<section id={htmlId}>
-    <hgroup><h2>{title}</h2></hgroup>
+<section id={htmlId} class="flex flex-col min-h-[50vh] md:flex-row m-auto w-full">
+    <hgroup class="md:w-96 shrink-0"><h2 class="text-3xl md:text-5xl my-6 md:m-0">{title}</h2></hgroup>
     <div class="section-content">
         <slot />
     </div>
 </section>
-
-<style>
-    section {
-        display: flex;
-        width: 100%;
-        min-height: 50vh;
-    }
-
-    hgroup {
-        width: 100%;
-        max-width: 24rem;
-
-        h2 {
-            margin: 0;
-            font-size: 3rem;
-            font-weight: 400;
-        }
-    }
-
-    .section-content {
-        flex-grow: 1;
-    }
-
-</style>
