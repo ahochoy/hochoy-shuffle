@@ -11,6 +11,8 @@ import Experience from '../components/Experience.astro';
 import * as bioData from '../data/bio-data.md';
 import * as thoughts from '../data/thoughts-blurb.md';
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets'
+import ampersandLogo from  '../assets/ampersand.png'
 const projects = await getCollection('projects');
 const currentExperiences = await getCollection('currentExperiences');
 const pastExperiences = await getCollection('pastExperiences');
@@ -35,7 +37,10 @@ const pastExperiences = await getCollection('pastExperiences');
 				<Experience experience={experience} /> 
 			))}
 		</HomepageSection>
-		<ChatBubble title={thoughts.frontmatter.title} htmlId="writings"><thoughts.Content /></ChatBubble>
+		<ChatBubble title={thoughts.frontmatter.title} htmlId="writings">
+			<thoughts.Content />
+			<a href="https://hochoy.substack.com/" target="_blank"><Image src={ampersandLogo} alt="Ampersand Logo" class="w-72 mt-12 mx-auto" /></a>
+		</ChatBubble>
 	</main>
 	<Footer />
 </Layout>
